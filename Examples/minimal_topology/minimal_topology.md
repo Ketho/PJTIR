@@ -1,6 +1,6 @@
 ![](https://github.com/Ketho/PJTIR/blob/master/Examples/minimal_topology/minimal_topology.png)
 
-## R1
+## R1 4311
 ```lua
 en
 conf t
@@ -14,7 +14,7 @@ ipv6 route 2020::10:0/112 2020::40:1
 end
 ```
 
-## MLS1
+## MLS1 3650
 ```lua
 en
 conf t
@@ -32,7 +32,7 @@ int vlan 10
 end
 ```
 
-## S1
+## S1 2960
 ```lua
 en
 conf t
