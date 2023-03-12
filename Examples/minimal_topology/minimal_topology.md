@@ -1,6 +1,6 @@
 ![](https://github.com/Ketho/PJTIR/blob/master/Examples/minimal_topology/minimal_topology.png)
 
-## R1 4311
+## R1 - 4311
 ```lua
 en
 conf t
@@ -14,7 +14,7 @@ ipv6 route 2020::10:0/112 2020::40:1
 end
 ```
 
-## MLS1 3650
+## MLS1 - 3650
 ```lua
 en
 conf t
@@ -32,15 +32,15 @@ int vlan 10
 end
 ```
 
-## S1 2960
+## S1 - 2960
 ```lua
 en
 conf t
 host S1
 no ip domain-lookup
-int f0/1
+int fa0/1
     switchport mode trunk
-int f0/2
+int fa0/2
     switchport mode access
     switchport access vlan 10
 end
