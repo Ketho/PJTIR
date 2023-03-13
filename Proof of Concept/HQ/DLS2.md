@@ -1,8 +1,9 @@
-## DLS2 - WS-C3650-24TS-E
+## HQ-DLS2
+model: WS-C3650-24TS-E
 ```lua
 en
 conf t
-host DLS2
+host HQ-DLS2
 no ip domain-lookup
 ipv6 unicast
 

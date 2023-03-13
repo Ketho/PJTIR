@@ -1,8 +1,9 @@
-## ALS2 - WS-C2960
+## HQ-ALS2
+model: WS-C2960+24TC-L
 ```lua
 en
 conf t
-host ALS2
+host HQ-ALS2
 no ip domain-lookup
 
 !! portchannel to DLS2
