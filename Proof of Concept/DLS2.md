@@ -9,7 +9,7 @@ ipv6 unicast
 !! routed port to R1
 int g1/0/7
     no switchport
-    ipv6 addr 2020::20:1/127
+    ipv6 addr 2a02:a420:b:120::11:1/127
     ipv6 ospf 1 area 0
     no sh
 
@@ -18,7 +18,7 @@ int range g1/0/3-4
     no switchport
     channel-group 1 mode on
 int port-channel 1
-    ipv6 addr 2030::10:1/127
+    ipv6 addr 2a02:a420:b:120::30:1/127
     ipv6 ospf 1 area 0
 
 !! portchannel to ALS2
@@ -36,11 +36,11 @@ int port-channel 3
 !! switching
 vlan 10
 int vlan 10
-    ipv6 addr 2040::10:1/112
+    ipv6 addr 2a02:a420:b:130::1/64
     ipv6 ospf 1 area 0
 vlan 20
 int vlan 20
-    ipv6 addr 2040::20:1/112
+    ipv6 addr 2a02:a420:b:131::1/64
     ipv6 ospf 1 area 0
 spanning-tree vlan 20 root primary
 
