@@ -37,12 +37,12 @@ int port-channel 3
 !! switching
 vlan 10
 int vlan 10
-    ipv6 addr 2a02:a420:b:130::0/64
+    ipv6 addr 2a02:a420:b:151::0/64
     ipv6 ospf 1 area 0
 spanning-tree vlan 10 root primary
 vlan 20
 int vlan 20
-    ipv6 addr 2a02:a420:b:131::0/64
+    ipv6 addr 2a02:a420:b:152::0/64
     ipv6 ospf 1 area 0
 
 !! routing
