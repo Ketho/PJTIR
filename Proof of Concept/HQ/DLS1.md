@@ -49,4 +49,6 @@ int vlan 20
 ipv6 router ospf 1
     router-id 2.2.2.2
 end
+!! alleen voor de packet tracer
+copy running-config startup-config
 ```

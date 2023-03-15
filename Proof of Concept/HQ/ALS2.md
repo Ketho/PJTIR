@@ -21,4 +21,6 @@ int port-channel 2
 int fa0/7
     switchport access vlan 20
 end
+!! alleen voor de packet tracer
+copy running-config startup-config
 ```

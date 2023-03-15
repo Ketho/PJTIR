@@ -49,4 +49,6 @@ spanning-tree vlan 20 root primary
 ipv6 router ospf 1
     router-id 3.3.3.3
 end
+!! alleen voor de packet tracer
+copy running-config startup-config
 ```
