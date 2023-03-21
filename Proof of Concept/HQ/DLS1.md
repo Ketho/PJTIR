@@ -10,7 +10,13 @@ ipv6 unicast
 !! routed port to R1
 int g1/0/7
     no switchport
-    ipv6 addr 2a02:a420:b:120::10:1/127
+    ipv6 addr 2a02:a420:b:110::10:1/127
+    ipv6 ospf 1 area 0
+    no sh
+!! routed port to R2
+int g1/0/8
+    no switchport
+    ipv6 addr 2a02:a420:b:111::11:1/127
     ipv6 ospf 1 area 0
     no sh
 
@@ -39,15 +45,30 @@ vlan 10
 int vlan 10
     ipv6 addr 2a02:a420:b:151::0/64
     ipv6 ospf 1 area 0
-spanning-tree vlan 10 root primary
 vlan 20
 int vlan 20
     ipv6 addr 2a02:a420:b:152::0/64
     ipv6 ospf 1 area 0
+vlan 100
+int vlan 100
+    ipv6 addr 2a02:a420:b:161::1/64
+    ipv6 ospf 1 area 0
+vlan 110
+int vlan 110
+    ipv6 addr 2a02:a420:b:161::1/64
+    ipv6 ospf 1 area 0
+vlan 200
+int vlan 200
+    ipv6 addr 2a02:a420:b:170::1/64
+    ipv6 ospf 1 area 0
+vlan 300
+int vlan 300
+    ipv6 addr 2a02:a420:b:180::1/64
+    ipv6 ospf 1 area 0
 
 !! routing
 ipv6 router ospf 1
-    router-id 2.2.2.2
+    router-id 11.1.1.1
 end
 !! alleen voor de packet tracer
 copy running-config startup-config

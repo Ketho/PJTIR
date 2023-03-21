@@ -20,6 +20,16 @@ int port-channel 2
 
 int fa0/7
     switchport access vlan 10
+int fa0/8
+    switchport access vlan 20
+int fa0/9
+    switchport access vlan 100
+int fa0/10
+    switchport access vlan 110
+int fa0/11
+    switchport access vlan 200
+int fa0/12
+    switchport access vlan 300
 end
 !! alleen voor de packet tracer
 copy running-config startup-config
