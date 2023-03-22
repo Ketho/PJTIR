@@ -2,7 +2,7 @@ See [IP Plan](https://github.com/Ketho/PJTIR/issues/1)
 
 # within HQ
 _between routers_
-- ping HQ-R1 -> HQ-R2 `ping 2a02:a420:b:111::12:0`
+- ping HQ-R1 -> HQ-R2 lo0 `ping 2a02:a420:b:111::12:0`
 
 _between hosts_
 - ping HQ-PC1 -> HQ-PC2 `ping 2a02:a420:b:160::10` (vlan10 to vlan100)
