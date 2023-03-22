@@ -49,7 +49,22 @@ vlan 20
 int vlan 20
     ipv6 addr 2a02:a420:b:152::1/64
     ipv6 ospf 1 area 0
-spanning-tree vlan 20 root primary
+vlan 100
+int vlan 100
+    ipv6 addr 2a02:a420:b:160::1/64
+    ipv6 ospf 1 area 0
+vlan 110
+int vlan 110
+    ipv6 addr 2a02:a420:b:161::1/64
+    ipv6 ospf 1 area 0
+vlan 200
+int vlan 200
+    ipv6 addr 2a02:a420:b:170::1/64
+    ipv6 ospf 1 area 0
+vlan 300
+int vlan 300
+    ipv6 addr 2a02:a420:b:180::1/64
+    ipv6 ospf 1 area 0
 
 !! routing
 ipv6 router ospf 1
