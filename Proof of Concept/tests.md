@@ -1,4 +1,4 @@
-- IP Plan: https://github.com/Ketho/PJTIR/issues/1
+See [IP Plan](https://github.com/Ketho/PJTIR/issues/1)
 
 # within HQ
 _between routers_
