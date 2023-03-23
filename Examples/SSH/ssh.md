@@ -1,3 +1,4 @@
+```lua
 // eerst hostname toevoegen 
 username cisco password 0 cisco
 ip domain-name SSH
@@ -15,3 +16,4 @@ line vty 5 15
  login local
  transport input ssh
 end
+```
