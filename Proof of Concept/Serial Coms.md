@@ -6,4 +6,4 @@ ze zijn niet altijd hetzelfde maar dit is ff voor het gemak
 - COM16   HQ-ALS2
 
 - COM12   HQ-DLS1
-- COM13   HQ-DLS
+- COM13   HQ-DLS2
