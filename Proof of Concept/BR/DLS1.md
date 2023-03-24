@@ -45,6 +45,7 @@ int vlan 100
 ipv6 router ospf 1
     router-id 21.1.1.1
 end
+
 !! alleen voor de packet tracer
 copy running-config startup-config
 ```

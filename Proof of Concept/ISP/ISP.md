@@ -6,6 +6,7 @@ conf t
 host ISP
 no ip domain-lookup
 ipv6 unicast
+
 int s0/3/0
     ipv6 addr 2a02:a420:b:110::1:1/127
     ipv6 ospf 1 area 0
@@ -24,6 +25,22 @@ int lo0
 ipv6 router ospf 1
     router-id 30.1.1.1
 end
+
+!! ssh apart instellen
+conf t
+ip domain name pjtir6.net
+!! handmatig 1024 invoeren
+crypto key generate rsa
+
+ip ssh version 2
+service password-encryption
+username cisco password cisco
+username cisco privilege 15
+line vty 0 4
+    login local
+    transport input ssh
+end
+
 !! alleen voor de packet tracer
 copy running-config startup-config
 ```
