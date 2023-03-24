@@ -70,6 +70,21 @@ int vlan 300
 ipv6 router ospf 1
     router-id 11.2.2.2
 end
+
+!! ssh apart instellen
+conf t
+ip domain name pjtir6.net
+ip ssh version 2
+service password-encryption
+username cisco password cisco
+username cisco privilege 15
+line vty 0 4
+    login local
+    transport input ssh
+!! handmatig 1024 invoeren
+crypto key generate rsa
+end
+
 !! alleen voor de packet tracer
 copy running-config startup-config
 ```

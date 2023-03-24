@@ -31,6 +31,7 @@ int fa0/11
 int fa0/12
     switchport access vlan 300
 end
+
 !! alleen voor de packet tracer
 copy running-config startup-config
 ```
