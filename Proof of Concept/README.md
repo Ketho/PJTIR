@@ -66,8 +66,8 @@
     - vlan100   2a02:a420:b:2a10::0/64
     - vlan300   2a02:a420:b:2a30::0/64
 ## hosts
-- BR-PC1        2a02:a420:b:2a1::10/64  (vlan 10)
-- BR-PC2        2a02:a420:b:2a10::10/64 (vlan 100)
+- BR-PC1        2a02:a420:b:2a1::10/64  (vlan 10)  gateway 2a02:a420:b:2a1::0
+- BR-PC2        2a02:a420:b:2a10::10/64 (vlan 100) gateway 2a02:a420:b:2a10::0
 ```
 
 ![](https://github.com/Ketho/PJTIR/blob/master/Proof%20of%20Concept/topologie.png)
