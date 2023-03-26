@@ -18,6 +18,7 @@ int range fa0/5-6
 int port-channel 2
     switchport mode trunk
 
+!! access ports
 int fa0/7
     switchport access vlan 10
 int fa0/8
@@ -30,7 +31,13 @@ int fa0/11
     switchport access vlan 200
 int fa0/12
     switchport access vlan 300
+
+!! vtp
+vtp mode client
+vtp domain rp6_hq_vtp
+vtp password banaan123
 end
+
 !! alleen voor de packet tracer
 copy running-config startup-config
 ```
