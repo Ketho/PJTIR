@@ -7,6 +7,10 @@ host HQ-DLS1
 no ip domain-lookup
 ipv6 unicast
 
+!! loopback
+int lo0
+    ipv6 addr 2a02:a420:b:120::f:0/112
+    ipv6 ospf 1 area 0
 !! routed port to R1
 int g1/0/7
     no switchport
@@ -19,17 +23,13 @@ int g1/0/8
     ipv6 addr 2a02:a420:b:111::11:1/127
     ipv6 ospf 1 area 0
     no sh
-!! loopback
-int lo0
-    ipv6 addr 2a02:a420:b:120::f:0/112
-    ipv6 ospf 1 area 0
 
 !! L3 portchannel to DLS2
 int range g1/0/3-4
     no switchport
     channel-group 1 mode active
 int port-channel 1
-    ipv6 addr 2a02:a420:b:120::30:0/127
+    ipv6 addr 2a02:a420:b:120::10:0/127
     ipv6 ospf 1 area 0
 
 !! portchannel to ALS1
@@ -50,22 +50,22 @@ ipv6 router ospf 1
 
 !! inter-vlan routing
 int vlan 10
-    ipv6 addr 2a02:a420:b:151::0/64
+    ipv6 addr 2a02:a420:b:1a1::0/64
     ipv6 ospf 1 area 0
 int vlan 20
-    ipv6 addr 2a02:a420:b:152::0/64
+    ipv6 addr 2a02:a420:b:1a2::0/64
     ipv6 ospf 1 area 0
 int vlan 100
-    ipv6 addr 2a02:a420:b:160::0/64
+    ipv6 addr 2a02:a420:b:1a10::0/64
     ipv6 ospf 1 area 0
 int vlan 110
-    ipv6 addr 2a02:a420:b:161::0/64
+    ipv6 addr 2a02:a420:b:1a11::0/64
     ipv6 ospf 1 area 0
 int vlan 200
-    ipv6 addr 2a02:a420:b:170::0/64
+    ipv6 addr 2a02:a420:b:1a20::0/64
     ipv6 ospf 1 area 0
 int vlan 300
-    ipv6 addr 2a02:a420:b:180::0/64
+    ipv6 addr 2a02:a420:b:1a30::0/64
     ipv6 ospf 1 area 0
 
 !! vlans

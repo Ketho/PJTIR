@@ -8,6 +8,10 @@ host BR-DLS1
 no ip domain-lookup
 ipv6 unicast
 
+!! loopback
+int lo0
+    ipv6 addr 2a02:a420:b:220::f:0/112
+    ipv6 ospf 1 area 0
 !! routed port to R1
 int fa0/7
     no switchport
@@ -17,14 +21,8 @@ int fa0/7
 
 !! portchannel to ALS1
 int range fa0/1-2
-    channel-group 2 mode active
-int port-channel 2
-    switchport mode trunk
-
-!! portchannel to ALS2
-int range fa0/5-6
-    channel-group 3 mode active
-int port-channel 3
+    channel-group 1 mode active
+int port-channel 1
     switchport mode trunk
 
 !! routing
@@ -33,13 +31,13 @@ ipv6 router ospf 1
 
 !! inter-vlan routing
 int vlan 10
-    ipv6 addr 2a02:a420:b:251::0/64
+    ipv6 addr 2a02:a420:b:2a1::0/64
     ipv6 ospf 1 area 0
 int vlan 20
-    ipv6 addr 2a02:a420:b:252::0/64
+    ipv6 addr 2a02:a420:b:2a2::0/64
     ipv6 ospf 1 area 0
 int vlan 100
-    ipv6 addr 2a02:a420:b:260::0/64
+    ipv6 addr 2a02:a420:b:2a10::0/64
     ipv6 ospf 1 area 0
 
 !! vlans
