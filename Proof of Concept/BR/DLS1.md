@@ -56,7 +56,7 @@ vlan 300
 
 !! vtp
 vtp mode server
-vtp domain rp6_br
+vtp domain rp6_br_vtp
 vtp password banaan123
 end
 

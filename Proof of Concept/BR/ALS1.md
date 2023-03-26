@@ -22,7 +22,7 @@ int fa0/9
 
 !! vtp
 vtp mode client
-vtp domain rp6_br
+vtp domain rp6_br_vtp
 vtp password banaan123
 end
 

@@ -50,27 +50,27 @@ ipv6 router ospf 1
 
 !! inter-vlan routing
 int vlan 10
-    ipv6 addr 2a02:a420:b:1b1::1/64
+    ipv6 addr 2a02:a420:b:1a1::1/64
     ipv6 ospf 1 area 0
 int vlan 20
-    ipv6 addr 2a02:a420:b:1b2::1/64
+    ipv6 addr 2a02:a420:b:1a2::1/64
     ipv6 ospf 1 area 0
 int vlan 100
-    ipv6 addr 2a02:a420:b:1b10::1/64
+    ipv6 addr 2a02:a420:b:1a10::1/64
     ipv6 ospf 1 area 0
 int vlan 110
-    ipv6 addr 2a02:a420:b:1b11::1/64
+    ipv6 addr 2a02:a420:b:1a11::1/64
     ipv6 ospf 1 area 0
 int vlan 200
-    ipv6 addr 2a02:a420:b:1b20::1/64
+    ipv6 addr 2a02:a420:b:1a20::1/64
     ipv6 ospf 1 area 0
 int vlan 300
-    ipv6 addr 2a02:a420:b:1b30::1/64
+    ipv6 addr 2a02:a420:b:1a30::1/64
     ipv6 ospf 1 area 0
 
 !! vtp
 vtp mode client
-vtp domain rp6_hq
+vtp domain rp6_hq_vtp
 vtp password banaan123
 end
 

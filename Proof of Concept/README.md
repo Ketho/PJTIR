@@ -48,8 +48,9 @@
     - vlan300   2a02:a420:b:1b30::0/64
 ## hosts
 - HQ-PC1        2a02:a420:b:1a1::10/64  (vlan 10)  gateway 2a02:a420:b:1a1::0
+- HQ-PC2        auto
 - Server1       2a02:a420:b:1a2::10/64  (vlan 20)  gateway 2a02:a420:b:1a2::0
-- HQ-PC2        2a02:a420:b:1a10::10/64 (vlan 100) gateway 2a02:a420:b:1a10::0
+- HQ-PC10       2a02:a420:b:1a10::10/64 (vlan 100) gateway 2a02:a420:b:1a10::0
 ```
 
 ### BR
