@@ -1,0 +1,28 @@
+crypto isakmp policy 10
+ encr aes 256
+ authentication pre-share
+ group 5
+
+crypto isakmp key cisco address <remote-peer-IPv6-address>
+
+crypto isakmp profile aes
+   keyring default
+   self-identity address ipv6
+   match identity address ipv6 <remote-peer-IPv6-address>
+
+crypto ipsec transform-set IPSECTRANS esp-aes 256 esp-sha-hmac
+ mode tunnel
+
+crypto ipsec profile ipsec_profile
+ set transform-set IPSECTRANS
+
+interface Tunnel1
+ ipv6 address <ipv6-address>/<prefix-length>
+ ipv6 enable
+ //ipv6 ospf 10 area 0
+ tunnel source <local-ip-address>
+ tunnel mode ipsec ipv6
+ tunnel destination <remote-ip-address>
+ tunnel protection ipsec profile ipsec_profile
+
+ipv6 route <destination-prefix> <prefix-length> <next-hop-address>
