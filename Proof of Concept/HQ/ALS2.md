@@ -18,12 +18,18 @@ int range fa0/5-6
 int port-channel 2
     switchport mode trunk
 
+!! access ports
 int fa0/7
     switchport access vlan 10
 int fa0/8
     switchport access vlan 20
 int fa0/9
     switchport access vlan 100
+
+!! vtp
+vtp mode client
+vtp domain rp6_hq
+vtp password banaan123
 end
 
 !! alleen voor de packet tracer

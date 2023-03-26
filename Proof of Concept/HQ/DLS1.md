@@ -19,11 +19,15 @@ int g1/0/8
     ipv6 addr 2a02:a420:b:111::11:1/127
     ipv6 ospf 1 area 0
     no sh
+!! loopback
+int lo0
+    ipv6 addr 2a02:a420:b:120::f:0/112
+    ipv6 ospf 1 area 0
 
 !! L3 portchannel to DLS2
 int range g1/0/3-4
     no switchport
-    channel-group 1 mode on
+    channel-group 1 mode active
 int port-channel 1
     ipv6 addr 2a02:a420:b:120::30:0/127
     ipv6 ospf 1 area 0
@@ -40,36 +44,50 @@ int range g1/0/5-6
 int port-channel 3
     switchport mode trunk
 
-!! switching
-vlan 10
+!! routing
+ipv6 router ospf 1
+    router-id 11.1.1.1
+
+!! inter-vlan routing
 int vlan 10
     ipv6 addr 2a02:a420:b:151::0/64
     ipv6 ospf 1 area 0
-vlan 20
 int vlan 20
     ipv6 addr 2a02:a420:b:152::0/64
     ipv6 ospf 1 area 0
-vlan 100
 int vlan 100
     ipv6 addr 2a02:a420:b:160::0/64
     ipv6 ospf 1 area 0
-vlan 110
 int vlan 110
     ipv6 addr 2a02:a420:b:161::0/64
     ipv6 ospf 1 area 0
-vlan 200
 int vlan 200
     ipv6 addr 2a02:a420:b:170::0/64
     ipv6 ospf 1 area 0
-vlan 300
 int vlan 300
     ipv6 addr 2a02:a420:b:180::0/64
     ipv6 ospf 1 area 0
 
-!! routing
-ipv6 router ospf 1
-    router-id 11.1.1.1
+!! vlans
+vlan 10
+    name ict
+vlan 20
+    name servers
+vlan 100
+    name directie
+vlan 110
+    name administratie
+vlan 200
+    name productie
+vlan 300
+    name wifi_gast
+
+!! vtp
+vtp mode server
+vtp domain rp6_hq
+vtp password banaan123
 end
+
 
 !! ssh apart instellen
 conf t
