@@ -34,7 +34,7 @@
     - vlan100   2a02:a420:b:160::0/64 (directie)
     - vlan110   2a02:a420:b:161::0/64 (administratie)
     - vlan200   2a02:a420:b:170::0/64 (productie)
-    - vlan300   2a02:a420:b:180::0/64 (wifi gastnetwerk)
+    - vlan300   2a02:a420:b:180::0/64 (wifi_gast)
 - HQ-DLS2
     - g1/0/7    2a02:a420:b:111::10:1/127 (R2)
     - g1/0/8    2a02:a420:b:110::11:1/127 (R1)
