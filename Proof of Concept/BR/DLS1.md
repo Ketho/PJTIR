@@ -37,7 +37,7 @@ int vlan 20
     ipv6 addr 2a02:a420:b:2a2::0/64
     ipv6 ospf 1 area 0
 int vlan 100
-    ipv6 addr 2a02:a420:b:2a10::0/64
+    ipv6 addr 2a02:a420:b:2a3::0/64
     ipv6 ospf 1 area 0
 
 !! vlans
