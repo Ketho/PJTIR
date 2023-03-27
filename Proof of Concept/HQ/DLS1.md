@@ -27,7 +27,7 @@ int g1/0/8
 !! L3 portchannel to DLS2
 int range g1/0/3-4
     no switchport
-    channel-group 1 mode on
+    channel-group 1 mode active
 int port-channel 1
     ipv6 addr 2a02:a420:b:120::10:0/127
     ipv6 ospf 1 area 0
@@ -56,16 +56,16 @@ int vlan 20
     ipv6 addr 2a02:a420:b:1a2::0/64
     ipv6 ospf 1 area 0
 int vlan 100
-    ipv6 addr 2a02:a420:b:1a10::0/64
+    ipv6 addr 2a02:a420:b:1a3::0/64
     ipv6 ospf 1 area 0
 int vlan 110
-    ipv6 addr 2a02:a420:b:1a11::0/64
+    ipv6 addr 2a02:a420:b:1a4::0/64
     ipv6 ospf 1 area 0
 int vlan 200
-    ipv6 addr 2a02:a420:b:1a20::0/64
+    ipv6 addr 2a02:a420:b:1a5::0/64
     ipv6 ospf 1 area 0
 int vlan 300
-    ipv6 addr 2a02:a420:b:1a30::0/64
+    ipv6 addr 2a02:a420:b:1a6::0/64
     ipv6 ospf 1 area 0
 
 !! vlans
