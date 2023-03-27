@@ -15,8 +15,8 @@ See [IP Plan](https://github.com/Ketho/PJTIR/issues/1)
 - BR-PC2    `ping 2a02:a420:b:2a3::10` (vlan100)
 
 # ssh
-- HQ-R1     `ssh -l cisco 2a02:a420:b:110::f:0`
 - HQ-DLS1   `ssh -l cisco 2a02:a420:b:120::f:0`
+- HQ-R1     `ssh -l cisco 2a02:a420:b:110::f:0`
 - ISP       `ssh -l cisco 2a02:a420:b:300::f:0 -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes256-cbc`
 - BR-R1     `ssh -l cisco 2a02:a420:b:210::f:0 -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes256-cbc`
 
