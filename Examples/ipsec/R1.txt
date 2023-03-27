@@ -21,10 +21,9 @@ crypto ipsec profile ipsec_profile
 interface Tunnel1
  ipv6 address 2a02:a420:b:1f::10:0/127
  ipv6 enable
- //ipv6 ospf 10 area 0
  tunnel source  2a02:a420:b:110::1:0/127 
  tunnel mode ipsec ipv6
  tunnel destination 2a02:a420:b:210::1:0/127
  tunnel protection ipsec profile ipsec_profile
 
-ipv6 route <destination-prefix> <prefix-length> <next-hop-address>
+ipv6 route 2a02:a420:b:210::10:0/127 2a02:a420:b:1f::10:0
