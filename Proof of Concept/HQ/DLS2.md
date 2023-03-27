@@ -27,7 +27,7 @@ int g1/0/8
 !! L3 portchannel to DLS1
 int range g1/0/3-4
     no switchport
-    channel-group 1 mode active
+    channel-group 1 mode on
 int port-channel 1
     ipv6 addr 2a02:a420:b:120::10:1/127
     ipv6 ospf 1 area 0
