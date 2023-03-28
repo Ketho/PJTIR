@@ -17,7 +17,7 @@
 - HQ-R1
     - lo0       2a02:a420:b:110::f:0/112
     - s0/1/0    2a02:a420:b:110::1:0/127  (ISP)
-    - g0/0/0    2a02:a420:b:110::10:0/127 (DLS1)
+    - g0/0/0    2a02:a420:b:110::10:0/127 (DLS1) [DHCP]
     - g0/0/1    2a02:a420:b:110::11:0/127 (DLS2)
     - tunnel1   2a02:a420:b:1ff::10:0/127 (BR-R1)
 - HQ-R2
@@ -51,7 +51,7 @@
 ## hosts
 - HQ-PC1        2a02:a420:b:1a1::10/64  (vlan 10)  gateway 2a02:a420:b:1a1::0
 - HQ-PC2        auto
-- Server1       2a02:a420:b:1a2::10/64  (vlan 20)  gateway 2a02:a420:b:1a2::0
+- Server1       2a02:a420:b:1a2::10/64  (vlan 20)  gateway 2a02:a420:b:1a2::0 [DNS]
 - HQ-PC10       2a02:a420:b:1a3::10/64 (vlan 100)  gateway 2a02:a420:b:1a3::0
 ```
 

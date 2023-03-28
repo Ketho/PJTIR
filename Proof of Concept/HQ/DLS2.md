@@ -52,21 +52,33 @@ ipv6 router ospf 1
 int vlan 10
     ipv6 addr 2a02:a420:b:1a1::1/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination 2a02:a420:b:110::10:0
 int vlan 20
     ipv6 addr 2a02:a420:b:1a2::1/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination 2a02:a420:b:110::10:0
 int vlan 100
     ipv6 addr 2a02:a420:b:1a3::1/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination 2a02:a420:b:110::10:0
 int vlan 110
     ipv6 addr 2a02:a420:b:1a4::1/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination 2a02:a420:b:110::10:0
 int vlan 200
     ipv6 addr 2a02:a420:b:1a5::1/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination 2a02:a420:b:110::10:0
 int vlan 300
     ipv6 addr 2a02:a420:b:1a6::1/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination 2a02:a420:b:110::10:0
 
 !! vtp
 vtp mode client
