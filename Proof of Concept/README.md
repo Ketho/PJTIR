@@ -75,4 +75,4 @@
 - BR-PC2        2a02:a420:b:2a3::10/64 (vlan 100) gateway 2a02:a420:b:2a3::0
 ```
 
-![](https://github.com/Ketho/PJTIR/blob/master/Proof%20of%20Concept/docs/topologie.png)
+![](https://github.com/Ketho/PJTIR/blob/master/Proof%20of%20Concept/topologie.png)
