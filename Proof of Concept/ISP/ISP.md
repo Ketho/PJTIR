@@ -22,7 +22,7 @@ int s0/3/1
     ipv6 ospf 1 area 0
     no sh
 !! to BR-R1
-int s0/2/0
+int s0/2/1
     ipv6 addr 2a02:a420:b:210::1:1/127
     ipv6 ospf 1 area 0
     no sh
