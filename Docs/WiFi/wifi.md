@@ -1,0 +1,5 @@
+- SSID: Project6
+- wachtwoord: Project6
+--
+- wachtwoord interface: Project6
+- IP: 192.168.4.1
