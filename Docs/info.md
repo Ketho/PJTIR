@@ -1,6 +1,7 @@
 ## boot from startup-config
 -- https://community.cisco.com/t5/switching/won-t-load-startup-config/td-p/771348
 -- https://ipcisco.com/lesson/configuration-register/
+-- https://www.cisco.com/c/en/us/support/docs/routers/10000-series-routers/50421-config-register-use.html
 
 4331
 ```lua
