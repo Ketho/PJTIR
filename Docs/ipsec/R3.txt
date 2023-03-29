@@ -25,7 +25,7 @@ crypto ipsec profile ipsec_profile2
  set transform-set IPSECTRANS2
 
 interface Tunnel1
- ipv6 address 2a02:a420:b:1f::10:1/127 
+ ipv6 address 2a02:a420:b:2ff::10:1
  ipv6 enable
  ipv6 ospf 1 area 0
  tunnel source 2a02:a420:b:210::1:0
