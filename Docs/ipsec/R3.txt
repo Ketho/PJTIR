@@ -3,13 +3,13 @@ crypto isakmp policy 10
  authentication pre-share
  group 5
 
-crypto isakmp key cisco address ipv6 2a02:a420:b:100::/56
+crypto isakmp key cisco address ipv6 2a02:a420:b:110::1:0/127
 crypto isakmp key cisco address ipv6 2a02:a420:b:111::1:0/127
 
 crypto isakmp profile aes
    keyring default
-   self-identity address //ipv6?
-   match identity address ipv6 2a02:a420:b:100::/56
+   self-identity address ipv6
+   match identity address ipv6 2a02:a420:b:110::1:0/127
    match identity address ipv6 2a02:a420:b:111::1:0/127
 
 crypto ipsec transform-set IPSECTRANS esp-aes 256 esp-sha-hmac
@@ -27,9 +27,9 @@ crypto ipsec profile ipsec_profile2
 interface Tunnel1
  ipv6 address 2a02:a420:b:1f::10:1/127 
  ipv6 enable
- tunnel source 2a02:a420:b:200::
+ tunnel source 2a02:a420:b:210::1:0
  tunnel mode ipsec ipv6
- tunnel destination 2a02:a420:b:100::
+ tunnel destination 2a02:a420:b:110::1:0
  tunnel protection ipsec profile ipsec_profile
 
 interface Tunnel2
