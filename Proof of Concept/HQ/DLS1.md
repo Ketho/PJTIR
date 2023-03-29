@@ -79,6 +79,10 @@ int vlan 300
     ipv6 ospf 1 area 0
     ipv6 nd other-config-flag
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
+!! ssh ALS1
+int vlan 1
+    ipv6 addr 2a02:a420:b:1b1::1/64
+    no sh
 
 !! vlans
 vlan 10

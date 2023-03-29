@@ -42,12 +42,15 @@
     - g1/0/7    2a02:a420:b:111::10:1/127 (R2)
     - g1/0/8    2a02:a420:b:110::11:1/127 (R1)
     - g1/0/3-4  2a02:a420:b:120::10:1/127 (DLS1, L3 port-channel)
+    - vlan1     2a02:a420:b:1b1::1/64 (ssh ALS1)
     - vlan10    2a02:a420:b:1a1::1/64
     - vlan20    2a02:a420:b:1a2::1/64
     - vlan100   2a02:a420:b:1a3::1/64
     - vlan110   2a02:a420:b:1a4::1/64
     - vlan200   2a02:a420:b:1a5::1/64
     - vlan300   2a02:a420:b:1a6::1/64
+- HQ-ALS1
+    - vlan1     2a02:a420:b:1b1::2/64 (ssh)
 ## hosts
 - HQ-PC1        2a02:a420:b:1a1::10/64  (vlan 10)  gateway 2a02:a420:b:1a1::0
 - HQ-PC2        auto

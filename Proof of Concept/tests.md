@@ -19,3 +19,4 @@ See [IP Plan](https://github.com/Ketho/PJTIR/issues/1)
 - HQ-R1     `ssh -l cisco 2a02:a420:b:110::f:0`
 - ISP       `ssh -l cisco 2a02:a420:b:300::f:0 -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes256-cbc`
 - BR-R1     `ssh -l cisco 2a02:a420:b:210::f:0 -oKexAlgorithms=+diffie-hellman-group1-sha1 -c aes256-cbc`
+- HQ-ALS1: ssh HQ-DLS1 -> `ssh -l cisco 2a02:a420:b:1b1::2/64`
