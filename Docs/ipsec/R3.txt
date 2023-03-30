@@ -34,16 +34,13 @@ interface Tunnel1
  tunnel protection ipsec profile ipsec_profile
 
 interface Tunnel2
- ipv6 address 2a02:a420:b:1f::11:1/127
+ ipv6 address 2a02:a420:b:2ff::11:1/127
  ipv6 enable
  ipv6 ospf 1 area 0
- tunnel source 2a02:a420:b:210::1:0/127
+ tunnel source 2a02:a420:b:210::1:0
  tunnel mode ipsec ipv6
- tunnel destination 2a02:a420:b:111::1:0/127
+ tunnel destination 2a02:a420:b:111::1:0
  tunnel protection ipsec profile ipsec_profile2
 
 ipv6 route ::/0 2a02:a420:b:1ff::10:0
-ipv6 route 2a02:a420:b:111::11:0/127 2a02:a420:b:1f::10:1
-
-ipv6 route 2a02:a420:b:111::10:0/127 2a02:a420:b:1f::11:1
-ipv6 route 2a02:a420:b:111::11:0/127 2a02:a420:b:1f::11:1
+ipv6 route ::/0 2a02:a420:b:1ff::11:0
