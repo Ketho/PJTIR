@@ -1,15 +1,15 @@
 # ping
 ```py
 ## routing
-- HQ-R1   lo0 ping 2a02:a420:b:110::f:0
-- HQ-R2   lo0 ping 2a02:a420:b:111::f:0
-- HQ-DLS1 lo0 ping 2a02:a420:b:120::f:0
-- HQ-DLS2 lo0 ping 2a02:a420:b:121::f:0
+- HQ-R1   lo0   ping 2a02:a420:b:110::f:0
+- HQ-R2   lo0   ping 2a02:a420:b:111::f:0
+- HQ-DLS1 lo0   ping 2a02:a420:b:120::f:0
+- HQ-DLS2 lo0   ping 2a02:a420:b:121::f:0
 
-- ISP     lo0 ping 2a02:a420:b:300::f:0
+- ISP     lo0   ping 2a02:a420:b:300::f:0
 
-- BR-R1   lo0 ping 2a02:a420:b:210::f:0
-- BR-DLS1 lo0 ping 2a02:a420:b:210::f:0
+- BR-R1   lo0   ping 2a02:a420:b:210::f:0
+- BR-DLS1 lo0   ping 2a02:a420:b:210::f:0
 ```
 
 ```py
