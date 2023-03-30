@@ -11,9 +11,9 @@
 - BR-DLS1 lo0 `ping 2a02:a420:b:210::f:0`
 
 ## hosts
-- HQ-PC1    `ping 2a02:a420:b:1a1::10` (vlan10)
-- HQ-PC10   `ping 2a02:a420:b:1a3::10` (vlan100)
+- HQ-PC10   `ping 2a02:a420:b:1a1::10` (vlan10)
 - Server1   `ping 2a02:a420:b:1a2::10` (vlan20)
+- HQ-PC11   `ping 2a02:a420:b:1a3::10` (vlan100)
 
 - BR-PC1    `ping 2a02:a420:b:2a1::10` (vlan10)
 - BR-PC2    `ping 2a02:a420:b:2a3::10` (vlan100)
