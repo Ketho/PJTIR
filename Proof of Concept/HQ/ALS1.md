@@ -41,6 +41,7 @@ vtp password banaan123
 spanning-tree mode rapid-pvst
 spanning-tree portfast default
 spanning-tree portfast bpduguard default
+spanning-tree vlan 10,20,100,110,200,300 root primary
 
 !! shutdown unused ports
 int range fa0/3-4, fa0/13-24, g0/1-2
