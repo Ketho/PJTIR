@@ -72,10 +72,13 @@
 - BR-DLS1
     - lo0       2a02:a420:b:220::f:0/112
     - g1/0/7    2a02:a420:b:220::10:1/127 (R1)
+    - vlan1     2a02:a420:b:2a0::0/64
     - vlan10    2a02:a420:b:2a1::0/64
     - vlan20    2a02:a420:b:2a2::0/64
     - vlan100   2a02:a420:b:2a3::0/64
     - vlan300   2a02:a420:b:2a4::0/64
+- BR-ALS1
+    - vlan1     2a02:a420:b:2a0::2/64 (ssh)
 ## hosts
 - BR-PC1        2a02:a420:b:2a1::10/64 (vlan 10)  gateway 2a02:a420:b:2a1::0
 - BR-PC2        2a02:a420:b:2a3::10/64 (vlan 100) gateway 2a02:a420:b:2a3::0

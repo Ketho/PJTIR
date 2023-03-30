@@ -49,7 +49,7 @@ BR-DLS1(config)#do show sdm prefer
 
 ## 2960
 ```lua
-sdm prefer dual-iconf pv4-and-ipv6 default
+sdm prefer dual-ipv4-and-ipv6 default
 ```
 ```lua
 HQ-ALS1#sh sdm p
