@@ -30,6 +30,17 @@ int fa0/9
 vtp mode client
 vtp domain rp6_hq_vtp
 vtp password banaan123
+
+!! spanning tree
+spanning-tree mode rapid-pvst
+spanning-tree portfast default
+
+!! shutdown unused ports
+int range fa0/3-4, fa0/13-24, g0/1-2
+    shutdown
+!! no portfast on trunking ports
+int range fa0/1-2, fa0/5-6
+    spanning-tree portfast disable
 end
 
 
