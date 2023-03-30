@@ -1,7 +1,6 @@
 ## paste into terminal
 - https://askubuntu.com/a/479252
 
-
 ## find serial port
 - https://askubuntu.com/questions/398941/find-which-tty-device-connected-over-usb
 ```

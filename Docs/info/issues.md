@@ -1,0 +1,2 @@
+- since the switches have a vlan1, that means PCs can just connect to that vlan (and the whole network) via unconfigured portt
+- need to shutdown all unused ports at least
