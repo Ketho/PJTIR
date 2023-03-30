@@ -34,6 +34,7 @@ vtp password banaan123
 !! spanning tree
 spanning-tree mode rapid-pvst
 spanning-tree portfast default
+spanning-tree portfast bpduguard default
 
 !! shutdown unused ports
 int range fa0/3-4, fa0/13-24, g0/1-2
