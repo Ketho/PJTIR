@@ -32,6 +32,25 @@ vtp domain rp6_hq_vtp
 vtp password banaan123
 end
 
+
+!! ssh apart instellen
+conf t
+int vlan 1
+    ipv6 addr 2a02:a420:b:1b1::3/64
+    no sh
+ip domain name pjtir6.net
+!! handmatig 1024 invoeren
+crypto key generate rsa
+
+ip ssh version 2
+service password-encryption
+username cisco password cisco
+username cisco privilege 15
+line vty 0 4
+    login local
+    transport input ssh
+end
+
 !! alleen voor de packet tracer
 copy running-config startup-config
 ```
