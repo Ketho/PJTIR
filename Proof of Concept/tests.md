@@ -22,8 +22,8 @@
 - BR-PC2    ping 2a02:a420:b:2a3::10 (vlan100)
 ```
 
-```py
 # ssh
+```py
 - HQ-R1     ssh -l cisco 2a02:a420:b:110::f:0
 - HQ-R2     ssh -l cisco 2a02:a420:b:111::f:0
 - HQ-DLS1   ssh -l cisco 2a02:a420:b:120::f:0
