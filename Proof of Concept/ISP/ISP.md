@@ -35,7 +35,7 @@ end
 
 !! ssh apart instellen
 conf t
-ip domain name pjtir6.net
+ip domain name pjtir6.local
 !! handmatig 1024 invoeren
 crypto key generate rsa
 

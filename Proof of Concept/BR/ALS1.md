@@ -32,7 +32,7 @@ conf t
 int vlan 1
     ipv6 addr 2a02:a420:b:2a0::2/64
     no sh
-ip domain name pjtir6.net
+ip domain name pjtir6.local
 !! handmatig 1024 invoeren
 crypto key generate rsa
 
