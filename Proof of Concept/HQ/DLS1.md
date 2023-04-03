@@ -58,7 +58,7 @@ int vlan 10
     !! hsrpv2
     standby version 2
     standby 10 ipv6 2a02:a420:b:1a1::2/64
-    standby 10 priority 90
+    standby 10 priority 95
     standby 10 preempt
 int vlan 20
     ipv6 addr 2a02:a420:b:1a2::0/64
@@ -67,7 +67,7 @@ int vlan 20
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 20 ipv6 2a02:a420:b:1a2::2/64
-    standby 20 priority 90
+    standby 20 priority 95
     standby 20 preempt
 int vlan 100
     ipv6 addr 2a02:a420:b:1a3::0/64
@@ -76,7 +76,7 @@ int vlan 100
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 100 ipv6 2a02:a420:b:1a3::2/64
-    standby 100 priority 90
+    standby 100 priority 95
     standby 100 preempt
 int vlan 110
     ipv6 addr 2a02:a420:b:1a4::0/64
@@ -85,7 +85,7 @@ int vlan 110
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 110 ipv6 2a02:a420:b:1a4::2/64
-    standby 110 priority 90
+    standby 110 priority 95
     standby 110 preempt
 int vlan 200
     ipv6 addr 2a02:a420:b:1a5::0/64
@@ -94,7 +94,7 @@ int vlan 200
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 200 ipv6 2a02:a420:b:1a5::2/64
-    standby 200 priority 90
+    standby 200 priority 95
     standby 200 preempt
 int vlan 300
     ipv6 addr 2a02:a420:b:1a6::0/64
@@ -103,7 +103,7 @@ int vlan 300
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 300 ipv6 2a02:a420:b:1a6::2/64
-    standby 300 priority 90
+    standby 300 priority 95
     standby 300 preempt
 
 !! vlans
