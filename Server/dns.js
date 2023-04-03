@@ -33,7 +33,7 @@ const server = dns2.createServer({
 		const response = Packet.createResponseFromRequest(request);
 		const [question] = request.questions;
 		if (data[request.questions[0].name]) {
-			console.log("# ", request.questions[0].name)
+			console.log("#", request.questions[0].name)
 			const { name } = question;
 			response.answers.push({
 				name,
