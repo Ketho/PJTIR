@@ -42,5 +42,3 @@ interface Tunnel2
  tunnel destination 2a02:a420:b:111::1:0
  tunnel protection ipsec profile ipsec_profile2
 
-ipv6 route ::/0 2a02:a420:b:1ff::10:0
-ipv6 route ::/0 2a02:a420:b:1ff::11:0
