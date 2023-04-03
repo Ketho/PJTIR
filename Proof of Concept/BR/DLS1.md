@@ -23,6 +23,7 @@ int fa0/7
 int range fa0/1-2
     channel-group 1 mode active
 int port-channel 1
+    switchport trunk encapsulation dot1q
     switchport mode trunk
 
 !! routing
