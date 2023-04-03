@@ -1,7 +1,9 @@
+conf t
 crypto isakmp policy 10
  encr aes 256
  authentication pre-share
  group 5
+exit
 
 crypto isakmp key cisco address ipv6 2a02:a420:b:110::1:0/127
 crypto isakmp key cisco address ipv6 2a02:a420:b:111::1:0/127
