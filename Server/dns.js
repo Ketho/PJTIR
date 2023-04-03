@@ -8,8 +8,8 @@ const server = dns2.createServer({
   handle: (request, send, rinfo) => {
     const response = Packet.createResponseFromRequest(request);
     const [question] = request.questions;
-    if (request.questions[0].name == "hello.hatsune.miku") {
-      console.log("# hello")
+    if (request.questions[0].name == "dns.pjtir6.net") {
+      console.log("# DNS")
       const { name } = question;
       response.answers.push({
         name,
@@ -17,19 +17,19 @@ const server = dns2.createServer({
         type: Packet.TYPE.AAAA, // IPv6
         class: Packet.CLASS.IN,
         ttl: 300,
-        address: '2a02:a45a:4099:1:6eee:cfb9:599:c8bd'
+        address: '2a02:a420:b:1a2::10'
       });
       send(response);
     }
-    else if (request.questions[0].name == "kasane.kpn") {
-      console.log("# kasane")
+    else if (request.questions[0].name == "hq-pc1") {
+      console.log("# HQ-PC1")
       const { name } = question;
       response.answers.push({
         name,
         type: Packet.TYPE.AAAA,
         class: Packet.CLASS.IN,
         ttl: 300,
-        address: '2a02:a45a:4099:1:6eee:cfb9:599:c8bd'
+        address: '2a02:a420:b:1a2::10'
       });
       send(response);
     }
@@ -55,7 +55,7 @@ server.on('close', () => {
 server.listen({
   udp: {
     port: 53,
-    address: "2a02:a45a:4099:1:6eee:cfb9:599:c8bd",
+    address: "2a02:a420:b:1a2::10",
   },
 });
 
