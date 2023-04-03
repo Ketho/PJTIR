@@ -37,7 +37,6 @@ int range g1/0/1-2
     channel-group 2 mode active
 int port-channel 2
     switchport mode trunk
-    switchport trunk native vlan 5
     switchport trunk allowed vlan 5,10,20,100,110,200,300
 
 !! portchannel to ALS2
@@ -45,7 +44,6 @@ int range g1/0/5-6
     channel-group 3 mode active
 int port-channel 3
     switchport mode trunk
-    switchport trunk native vlan 5
     switchport trunk allowed vlan 5,10,20,100,110,200,300
 
 !! routing
@@ -133,7 +131,7 @@ end
 
 !! ssh apart instellen
 conf t
-int vlan 5
+int vlan 1
     ipv6 addr 2a02:a420:b:1a0::0/64
     ipv6 ospf 1 area 0
 ip domain name pjtir6.net
