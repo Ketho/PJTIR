@@ -9,7 +9,7 @@ ls /dev/ > dev_list_1.txt
 ls /dev/ | diff --suppress-common-lines -y - dev_list_1.txt
 ```
 - /dev/ttyACM0 (routers)
-- /dev/ttyUSB1 (hot plug)
+- /dev/ttyUSB1 (hot plug, nr 4)
 
 ## fix putty font
 - https://askubuntu.com/questions/1255916/putty-unable-to-load-font-in-ubuntu-20-04
