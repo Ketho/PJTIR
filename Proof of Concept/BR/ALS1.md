@@ -11,7 +11,6 @@ int range fa0/1-2
     channel-group 1 mode active
 int port-channel 1
     switchport mode trunk
-    switchport trunk allowed vlan 5,10,20,100,110,200,300
 
 !! access ports
 int fa0/7
@@ -43,7 +42,7 @@ end
 
 !! ssh apart instellen
 conf t
-int vlan 5
+int vlan 1
     ipv6 addr 2a02:a420:b:2a0::2/64
     no sh
 ip domain name pjtir6.net

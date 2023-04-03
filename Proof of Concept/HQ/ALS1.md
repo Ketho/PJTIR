@@ -11,14 +11,12 @@ int range fa0/1-2
     channel-group 1 mode active
 int port-channel 1
     switchport mode trunk
-    switchport trunk allowed vlan 5,10,20,100,110,200,300
 
 !! portchannel to DLS2
 int range fa0/5-6
     channel-group 2 mode active
 int port-channel 2
     switchport mode trunk
-    switchport trunk allowed vlan 5,10,20,100,110,200,300
 !! access ports
 int fa0/7
     switchport access vlan 10
