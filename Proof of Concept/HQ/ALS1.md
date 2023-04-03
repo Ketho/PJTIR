@@ -17,6 +17,7 @@ int range fa0/5-6
     channel-group 2 mode active
 int port-channel 2
     switchport mode trunk
+
 !! access ports
 int fa0/7
     switchport access vlan 10
