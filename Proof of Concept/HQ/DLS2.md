@@ -37,14 +37,12 @@ int range g1/0/1-2
     channel-group 2 mode active
 int port-channel 2
     switchport mode trunk
-    switchport trunk allowed vlan 1,5,10,20,100,110,200,300
 
 !! portchannel to ALS1
 int range g1/0/5-6
     channel-group 3 mode active
 int port-channel 3
     switchport mode trunk
-    switchport trunk allowed vlan 1,5,10,20,100,110,200,300
 
 !! routing
 ipv6 router ospf 1
