@@ -1,7 +1,9 @@
+conf t
 crypto isakmp policy 10
  encr aes 256
  authentication pre-share
  group 5
+exit
 
 crypto isakmp key cisco address ipv6 2a02:a420:b:210::1:0/127
 
@@ -26,5 +28,3 @@ interface Tunnel1
  tunnel mode ipsec ipv6
  tunnel destination 2a02:a420:b:210::1:0
  tunnel protection ipsec profile ipsec_profile
-
-ipv6 route ::/0 2a02:a420:b:2ff::10:1
