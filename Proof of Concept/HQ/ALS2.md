@@ -25,6 +25,19 @@ int fa0/8
     switchport access vlan 20
 int fa0/9
     switchport access vlan 100
+int fa0/10
+    switchport access vlan 110
+int fa0/11
+    switchport access vlan 200
+int fa0/12
+    switchport access vlan 300
+
+!! port security
+int range fa0/7-12
+    switchport mode access
+    switchport port-security
+    switchport port-security mac-address sticky
+    switchport port-security violation shutdown
 
 !! vtp
 vtp mode client

@@ -32,6 +32,14 @@ int fa0/11
 int fa0/12
     switchport access vlan 300
 
+!! port security
+!! behalve voor fa0/7 voor het geval dat we dat ding bricken
+int range fa0/8-12
+    switchport mode access
+    switchport port-security
+    switchport port-security mac-address sticky
+    switchport port-security violation shutdown
+
 !! vtp
 vtp mode client
 vtp domain rp6_hq_vtp
