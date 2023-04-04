@@ -23,9 +23,6 @@ int s0/2/1
     ipv6 addr 2a02:a420:b:210::1:1/127
     no sh
 
-!! statische routes
-ipv6 route 2a02:a420:b:100::/56 2a02:a420:b:110::1:0
-ipv6 route 2a02:a420:b:200::/56 2a02:a420:b:210::1:0
 end
 
 
