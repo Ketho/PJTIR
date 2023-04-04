@@ -16,3 +16,7 @@ ls /dev/ | diff --suppress-common-lines -y - dev_list_1.txt
 
 ## show dns
 - https://askubuntu.com/questions/191563/how-to-view-the-dns-address-assigned-by-dhcp
+
+# ssh config file
+HostKeyAlgorithms ssh-rsa
+KexAlgorithms diffie-hellman-group-exchange-sha1
