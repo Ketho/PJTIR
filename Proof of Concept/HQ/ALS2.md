@@ -36,8 +36,8 @@ int fa0/12
 int fa0/13
     switchport access vlan 20
 
-!! port security
-int range fa0/7-12
+!! port security, only on f0/11-12 for demo purpose
+int range fa0/11-12
     switchport mode access
     switchport port-security
     switchport port-security mac-address sticky
