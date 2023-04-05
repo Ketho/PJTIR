@@ -158,25 +158,7 @@ int range g1/0/9-24
 ipv6 flow monitor monitor1 input
 end
 
-
-!! ssh apart instellen
-conf t
-int vlan 1
-    ipv6 addr 2a02:a420:b:1a0::1/64
-    ipv6 ospf 1 area 0
-ip domain name pjtir6.net
-!! handmatig 1024 invoeren
-crypto key generate rsa
-
-ip ssh version 2
-service password-encryption
-username cisco password cisco
-username cisco privilege 15
-line vty 0 4
-    login local
-    transport input ssh
-end
-
+!! qos
 class-map ICT
     match access-group name Voorrang
 policy-map ICT
@@ -197,6 +179,25 @@ int gi1/0/5
 int gi1/0/6
     service-policy input ICT
     service-policy output ICT
+
+
+!! ssh apart instellen
+conf t
+int vlan 1
+    ipv6 addr 2a02:a420:b:1a0::1/64
+    ipv6 ospf 1 area 0
+ip domain name pjtir6.net
+!! handmatig 1024 invoeren
+crypto key generate rsa
+
+ip ssh version 2
+service password-encryption
+username cisco password cisco
+username cisco privilege 15
+line vty 0 4
+    login local
+    transport input ssh
+end
 
 !! alleen voor de packet tracer
 copy running-config startup-config
