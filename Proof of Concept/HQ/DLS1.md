@@ -119,7 +119,12 @@ int vlan 300
     standby 300 track 1 decrement 20
     ipv6 traffic-filter Rechten in
 
+!! hsrp track R1
 track 1 int g1/0/7 line-protocol
+
+!! shutdown unused ports
+int range fa0/9-24
+    shutdown
 
 !! vlans
 vlan 10

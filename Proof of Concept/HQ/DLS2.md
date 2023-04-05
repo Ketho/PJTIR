@@ -113,7 +113,12 @@ int vlan 300
     standby 300 preempt
     ipv6 traffic-filter Rechten in 
 
+!! hsrp track R2
 track 1 int g1/0/7 line-protocol
+
+!! shutdown unused ports
+int range fa0/9-24
+    shutdown
 
 !! vtp
 vtp mode client
