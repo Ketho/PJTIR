@@ -3,6 +3,8 @@ destination 2a02:a420:b:1a1::10
 transport udp 9997
 exit
 
+snmp-server community public
+
 flow record record1
 match ipv6 traffic-class
 match ipv6 protocol
