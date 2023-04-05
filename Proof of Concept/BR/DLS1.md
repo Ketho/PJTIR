@@ -51,6 +51,10 @@ int vlan 300
     ipv6 addr 2a02:a420:b:2a6::0/64
     ipv6 ospf 1 area 0
 
+!! shutdown unused ports
+int range fa0/3-6,fa0/8-24
+    shutdown
+
 !! vlans
 vlan 10
     name ict

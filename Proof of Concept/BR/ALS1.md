@@ -27,6 +27,10 @@ int fa0/11
 int fa0/12
     switchport access vlan 300
 
+!! shutdown unused ports
+int range fa0/13-24
+    shutdown
+
 !! vtp
 vtp mode client
 vtp domain rp6_br_vtp
