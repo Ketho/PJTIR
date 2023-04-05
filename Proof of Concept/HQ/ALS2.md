@@ -4,9 +4,7 @@ model: WS-C2960+24TC-L
 en
 conf t
 host HQ-ALS2
-
 banner motd $ forbidden access for strangers $
-
 no ip domain-lookup
 
 !! portchannel to DLS2

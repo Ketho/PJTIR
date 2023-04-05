@@ -5,9 +5,7 @@ en
 conf t
 host ISP
 no ip domain-lookup
-
 banner motd $ forbidden access for strangers $
-
 ipv6 unicast
 
 !! loopback
@@ -25,7 +23,6 @@ int s0/3/1
 int s0/2/1
     ipv6 addr 2a02:a420:b:210::1:1/127
     no sh
-
 end
 
 

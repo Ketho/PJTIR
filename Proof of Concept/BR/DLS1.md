@@ -6,9 +6,7 @@ en
 conf t
 host BR-DLS1
 no ip domain-lookup
-
 banner motd $ forbidden access for strangers $
-
 ipv6 unicast
 
 !! loopback
