@@ -5,6 +5,9 @@ en
 conf t
 host ISP
 no ip domain-lookup
+
+banner motd $ forbidden access for strangers $
+
 ipv6 unicast
 
 !! loopback

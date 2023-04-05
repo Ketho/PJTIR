@@ -6,6 +6,9 @@ en
 conf t
 host BR-DLS1
 no ip domain-lookup
+
+banner motd $ forbidden access for strangers $
+
 ipv6 unicast
 
 !! loopback
@@ -68,6 +71,34 @@ vlan 300
 vtp mode server
 vtp domain rp6_br_vtp
 vtp password banaan123
+
+flow exporter exporter1
+destination 2a02:a420:b:1a1::10
+transport udp 9997
+exit
+
+snmp-server community public
+
+flow record record1
+match ipv6 traffic-class
+match ipv6 protocol
+match ipv6 destination address
+match ipv6 source address
+match transport source-port
+match transport destination-port
+collect counter bytes long
+collect counter packets long
+exit
+
+flow monitor monitor1
+record record1
+exporter exporter1
+exit
+
+interface rang g1/0/1-8
+ipv6 flow monitor monitor1 input
+exit
+
 end
 
 

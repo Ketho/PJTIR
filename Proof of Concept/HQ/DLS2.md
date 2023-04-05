@@ -5,6 +5,9 @@ en
 conf t
 host HQ-DLS2
 no ip domain-lookup
+
+banner motd $ forbidden access for strangers $
+
 ipv6 unicast
 
 !! loopback
@@ -58,7 +61,7 @@ int vlan 10
     !! hsrpv2
     standby version 2
     standby 10 ipv6 2a02:a420:b:1a1::2/64
-    standby 10 priority 105
+    standby 10 priority 95
     standby 10 preempt
 int vlan 20
     ipv6 addr 2a02:a420:b:1a2::1/64
@@ -67,7 +70,7 @@ int vlan 20
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 20 ipv6 2a02:a420:b:1a2::2/64
-    standby 20 priority 105
+    standby 20 priority 95
     standby 20 preempt
 int vlan 100
     ipv6 addr 2a02:a420:b:1a3::1/64
@@ -76,7 +79,7 @@ int vlan 100
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 100 ipv6 2a02:a420:b:1a3::2/64
-    standby 100 priority 105
+    standby 100 priority 95
     standby 100 preempt
 int vlan 110
     ipv6 addr 2a02:a420:b:1a4::1/64
@@ -85,7 +88,7 @@ int vlan 110
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 110 ipv6 2a02:a420:b:1a4::2/64
-    standby 110 priority 105
+    standby 110 priority 95
     standby 110 preempt
 int vlan 200
     ipv6 addr 2a02:a420:b:1a5::1/64
@@ -94,7 +97,7 @@ int vlan 200
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 200 ipv6 2a02:a420:b:1a5::2/64
-    standby 200 priority 105
+    standby 200 priority 95
     standby 200 preempt
 int vlan 300
     ipv6 addr 2a02:a420:b:1a6::1/64
@@ -103,13 +106,41 @@ int vlan 300
     ipv6 dhcp relay destination 2a02:a420:b:110::10:0
     standby version 2
     standby 300 ipv6 2a02:a420:b:1a6::2/64
-    standby 300 priority 105
+    standby 300 priority 95
     standby 300 preempt
 
 !! vtp
 vtp mode client
 vtp domain rp6_hq_vtp
 vtp password banaan123
+
+flow exporter exporter1
+destination 2a02:a420:b:1a1::10
+transport udp 9997
+exit
+
+snmp-server community public
+
+flow record record1
+match ipv6 traffic-class
+match ipv6 protocol
+match ipv6 destination address
+match ipv6 source address
+match transport source-port
+match transport destination-port
+collect counter bytes long
+collect counter packets long
+exit
+
+flow monitor monitor1
+record record1
+exporter exporter1
+exit
+
+interface rang g1/0/1-8
+ipv6 flow monitor monitor1 input
+exit
+
 end
 
 
