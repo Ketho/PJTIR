@@ -63,7 +63,7 @@ int vlan 10
     standby 10 ipv6 2a02:a420:b:1a1::2/64
     standby 10 priority 95
     standby 10 preempt
-    ipv6 traffic-filter Rechten out 
+    ipv6 traffic-filter Rechten in 
 int vlan 20
     ipv6 addr 2a02:a420:b:1a2::1/64
     ipv6 ospf 1 area 0
@@ -73,7 +73,7 @@ int vlan 20
     standby 20 ipv6 2a02:a420:b:1a2::2/64
     standby 20 priority 95
     standby 20 preempt
-    ipv6 traffic-filter Rechten out 
+    ipv6 traffic-filter Rechten in
 int vlan 100
     ipv6 addr 2a02:a420:b:1a3::1/64
     ipv6 ospf 1 area 0
@@ -83,7 +83,7 @@ int vlan 100
     standby 100 ipv6 2a02:a420:b:1a3::2/64
     standby 100 priority 95
     standby 100 preempt
-    ipv6 traffic-filter Rechten out 
+    ipv6 traffic-filter Rechten in
 int vlan 110
     ipv6 addr 2a02:a420:b:1a4::1/64
     ipv6 ospf 1 area 0
@@ -93,7 +93,7 @@ int vlan 110
     standby 110 ipv6 2a02:a420:b:1a4::2/64
     standby 110 priority 95
     standby 110 preempt
-    ipv6 traffic-filter Rechten out 
+    ipv6 traffic-filter Rechten in 
 int vlan 200
     ipv6 addr 2a02:a420:b:1a5::1/64
     ipv6 ospf 1 area 0
@@ -103,7 +103,7 @@ int vlan 200
     standby 200 ipv6 2a02:a420:b:1a5::2/64
     standby 200 priority 95
     standby 200 preempt
-    ipv6 traffic-filter Rechten out 
+    ipv6 traffic-filter Rechten in 
 int vlan 300
     ipv6 addr 2a02:a420:b:1a6::1/64
     ipv6 ospf 1 area 0
@@ -113,7 +113,7 @@ int vlan 300
     standby 300 ipv6 2a02:a420:b:1a6::2/64
     standby 300 priority 95
     standby 300 preempt
-    ipv6 traffic-filter Rechten out 
+    ipv6 traffic-filter Rechten in 
 
 track 1 interface GigabitEthernet1/0/7 line-protocol
 
@@ -123,9 +123,9 @@ vtp domain rp6_hq_vtp
 vtp password banaan123
 
 ipv6 access-list Rechten
- permit icmp any any echo-reply
- deny ipv6 any 2A02:A420:B:1A1::/64
- permit ipv6 any any
+ permit icmp any any echo-reply sequence 10
+ deny ipv6 any 2A02:A420:B:1A1::/64 sequence 20
+ permit ipv6 any any sequence 30
 
 flow exporter exporter1
 destination 2a02:a420:b:1a1::10
