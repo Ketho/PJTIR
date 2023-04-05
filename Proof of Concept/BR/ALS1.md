@@ -51,11 +51,11 @@ flow record record1
     match ipv6 source address
     match transport source-port
     match transport destination-port
-collect counter bytes long
-collect counter packets long
+    collect counter bytes long
+    collect counter packets long
 flow monitor monitor1
-record record1
-exporter exporter1
+    record record1
+    exporter exporter1
 interface rang g1/0/1-8
 ipv6 flow monitor monitor1 input
 end
