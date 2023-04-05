@@ -119,7 +119,7 @@ int vlan 300
     standby 300 track 1 decrement 20
     ipv6 traffic-filter Rechten in
 
-track 1 interface GigabitEthernet1/0/7 line-protocol
+track 1 int g1/0/7 line-protocol
 
 !! vlans
 vlan 10

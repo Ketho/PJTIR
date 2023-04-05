@@ -113,7 +113,7 @@ int vlan 300
     standby 300 preempt
     ipv6 traffic-filter Rechten in 
 
-track 1 interface GigabitEthernet1/0/7 line-protocol
+track 1 int g1/0/7 line-protocol
 
 !! vtp
 vtp mode client
