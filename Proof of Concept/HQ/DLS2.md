@@ -159,6 +159,7 @@ ipv6 flow monitor monitor1 input
 end
 
 !! qos
+conf t
 class-map ICT
     match access-group name Voorrang
 policy-map ICT
@@ -179,7 +180,7 @@ int gi1/0/5
 int gi1/0/6
     service-policy input ICT
     service-policy output ICT
-
+end
 
 !! ssh apart instellen
 conf t
