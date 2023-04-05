@@ -26,6 +26,7 @@ int g1/0/8
     no sh
 
 !! L3 portchannel to DLS2
+no int port-channel 1
 int range g1/0/3-4
     no switchport
     channel-group 1 mode active
