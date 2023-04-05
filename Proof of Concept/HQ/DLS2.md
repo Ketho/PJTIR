@@ -126,6 +126,8 @@ ipv6 access-list Rechten
  permit icmp any any echo-reply sequence 10
  deny ipv6 any 2A02:A420:B:1A1::/64 sequence 20
  permit ipv6 any any sequence 30
+ipv6 access-list Voorrang
+ permit ipv6 2A02:A420:B:1A1::/64 any sequence 10
 
 flow exporter exporter1
 destination 2a02:a420:b:1a1::10
@@ -174,6 +176,27 @@ line vty 0 4
     login local
     transport input ssh
 end
+
+class-map ICT
+    match access-group name Voorrang
+policy-map ICT
+    class ICT
+    set dscp ef
+class class-default
+    police 45000000
+    exceed-action drop
+int gi1/0/1
+    service-policy input ICT
+    service-policy output ICT
+int gi1/0/2
+    service-policy input ICT
+    service-policy output ICT
+int gi1/0/5
+    service-policy input ICT
+    service-policy output ICT
+int gi1/0/6
+    service-policy input ICT
+    service-policy output ICT
 
 !! alleen voor de packet tracer
 copy running-config startup-config
