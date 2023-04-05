@@ -117,7 +117,7 @@ int vlan 300
 track 1 int g1/0/7 line-protocol
 
 !! shutdown unused ports
-int range fa0/9-24
+int range g1/0/9-24
     shutdown
 
 !! vtp
@@ -154,7 +154,7 @@ flow record record1
 flow monitor monitor1
     record record1
     exporter exporter1
-interface rang fa0/1-8
+int range g1/0/9-24
 ipv6 flow monitor monitor1 input
 end
 
