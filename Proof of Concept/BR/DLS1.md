@@ -35,21 +35,34 @@ ipv6 router ospf 1
 int vlan 10
     ipv6 addr 2a02:a420:b:2a1::0/64
     ipv6 ospf 1 area 0
+    !! dhcpv6
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination 
 int vlan 20
     ipv6 addr 2a02:a420:b:2a2::0/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination
 int vlan 100
     ipv6 addr 2a02:a420:b:2a3::0/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination
 int vlan 110
     ipv6 addr 2a02:a420:b:2a4::0/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination
 int vlan 200
     ipv6 addr 2a02:a420:b:2a5::0/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination
 int vlan 300
     ipv6 addr 2a02:a420:b:2a6::0/64
     ipv6 ospf 1 area 0
+    ipv6 nd other-config-flag
+    ipv6 dhcp relay destination
 
 !! shutdown unused ports
 int range fa0/3-6,fa0/8-24
