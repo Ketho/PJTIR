@@ -32,6 +32,9 @@ int fa0/11
     switchport access vlan 200
 int fa0/12
     switchport access vlan 300
+!! extra server
+int fa0/13
+    switchport access vlan 20
 
 !! port security
 int range fa0/7-12
@@ -52,7 +55,7 @@ spanning-tree portfast bpduguard default
 spanning-tree vlan 10,20,100,110,200,300 root secondary
 
 !! shutdown unused ports
-int range fa0/3-4, fa0/13-24, g0/1-2
+int range fa0/3-4, fa0/14-24, g0/1-2
     shutdown
 !! no portfast on trunking ports
 int range fa0/1-2, fa0/5-6
