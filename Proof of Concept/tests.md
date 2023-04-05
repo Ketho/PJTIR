@@ -7,7 +7,7 @@
 - HQ-DLS2 lo0   ping 2a02:a420:b:121::f:0
 
 - BR-R1   lo0   ping 2a02:a420:b:210::f:0
-- BR-DLS1 lo0   ping 2a02:a420:b:210::f:0
+- BR-DLS1 lo0   ping 2a02:a420:b:220::f:0
 ```
 
 ```py
