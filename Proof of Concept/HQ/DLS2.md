@@ -188,6 +188,7 @@ conf t
 int vlan 1
     ipv6 addr 2a02:a420:b:1a0::1/64
     ipv6 ospf 1 area 0
+    no sh
 ip domain name pjtir6.net
 !! handmatig 1024 invoeren
 crypto key generate rsa
