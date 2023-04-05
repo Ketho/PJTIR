@@ -5,9 +5,7 @@ en
 conf t
 host HQ-DLS2
 no ip domain-lookup
-
 banner motd $ forbidden access for strangers $
-
 ipv6 unicast
 
 !! loopback
@@ -122,40 +120,37 @@ vtp mode client
 vtp domain rp6_hq_vtp
 vtp password banaan123
 
+!! ACLs
 ipv6 access-list Rechten
- permit icmp any any echo-reply sequence 10
- deny ipv6 any 2A02:A420:B:1A1::/64 sequence 20
- permit ipv6 any any sequence 30
+    permit icmp any any echo-reply sequence 10
+    deny ipv6 any 2A02:A420:B:1A1::/64 sequence 20
+    permit ipv6 any any sequence 30
 ipv6 access-list Voorrang
- permit ipv6 2A02:A420:B:1A1::/64 any sequence 10
+    permit ipv6 2A02:A420:B:1A1::/64 any sequence 10
+end
 
+!! monitoring
+conf t
 flow exporter exporter1
 destination 2a02:a420:b:1a1::10
 transport udp 9997
-exit
 
 snmp-server community public
 
 flow record record1
-match ipv6 traffic-class
-match ipv6 protocol
-match ipv6 destination address
-match ipv6 source address
-match transport source-port
-match transport destination-port
+    match ipv6 traffic-class
+    match ipv6 protocol
+    match ipv6 destination address
+    match ipv6 source address
+    match transport source-port
+    match transport destination-port
 collect counter bytes long
 collect counter packets long
-exit
-
 flow monitor monitor1
 record record1
 exporter exporter1
-exit
-
 interface rang g1/0/1-8
 ipv6 flow monitor monitor1 input
-exit
-
 end
 
 
