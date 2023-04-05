@@ -4,9 +4,7 @@ model: WS-C2960+24TC-L
 en
 conf t
 host HQ-ALS1
-
 banner motd $ forbidden access for strangers $
-
 no ip domain-lookup
 
 !! portchannel to DLS1
@@ -34,14 +32,6 @@ int fa0/11
     switchport access vlan 200
 int fa0/12
     switchport access vlan 300
-
-!! port security
-!! behalve voor fa0/7 voor het geval dat we dat ding bricken
-int range fa0/8-12
-    switchport mode access
-    switchport port-security
-    switchport port-security mac-address sticky
-    switchport port-security violation shutdown
 
 !! vtp
 vtp mode client

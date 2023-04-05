@@ -5,9 +5,7 @@ en
 conf t
 host BR-ALS1
 no ip domain-lookup
-
 banner motd $ forbidden access for strangers $
-
 
 !! portchannel to DLS1
 int range fa0/1-2
@@ -28,13 +26,6 @@ int fa0/11
     switchport access vlan 200
 int fa0/12
     switchport access vlan 300
-
-!! port security
-int range fa0/7-12
-    switchport mode access
-    switchport port-security
-    switchport port-security mac-address sticky
-    switchport port-security violation shutdown
 
 !! vtp
 vtp mode client
