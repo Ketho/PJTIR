@@ -175,7 +175,7 @@ flow record record1
 flow monitor monitor1
     record record1
     exporter exporter1
-int range g1/0/9-24
+int range g1/0/1-24
 ipv6 flow monitor monitor1 input
 end
 
