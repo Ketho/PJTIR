@@ -42,29 +42,6 @@ int range fa0/13-24
 vtp mode client
 vtp domain rp6_br_vtp
 vtp password banaan123
-
-!! monitoring
-conf t
-flow exporter exporter1
-destination 2a02:a420:b:1a1::10
-transport udp 9997
-
-snmp-server community public
-
-flow record record1
-    match ipv6 traffic-class
-    match ipv6 protocol
-    match ipv6 destination address
-    match ipv6 source address
-    match transport source-port
-    match transport destination-port
-    collect counter bytes long
-    collect counter packets long
-flow monitor monitor1
-    record record1
-    exporter exporter1
-interface rang fa0/1-8
-ipv6 flow monitor monitor1 input
 end
 
 
