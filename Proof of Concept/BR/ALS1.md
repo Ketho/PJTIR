@@ -27,6 +27,13 @@ int fa0/11
 int fa0/12
     switchport access vlan 300
 
+!! port security
+int range fa0/7-12
+    switchport mode access
+    switchport port-security
+    switchport port-security mac-address sticky
+    switchport port-security violation shutdown
+
 !! shutdown unused ports
 int range fa0/13-24
     shutdown

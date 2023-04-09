@@ -36,6 +36,21 @@ int fa0/12
 int fa0/13
     switchport access vlan 20
 
+!! port security
+int range fa0/7-12
+    switchport mode access
+    switchport port-security
+    switchport port-security mac-address sticky
+    switchport port-security violation shutdown
+
+!! shutdown unused ports
+int range fa0/3-4, fa0/14-24, g0/1-2
+    shutdown
+!! no portfast on trunking ports
+int range fa0/1-2, fa0/5-6
+    spanning-tree portfast disable
+end
+
 !! vtp
 vtp mode client
 vtp domain rp6_hq_vtp
@@ -46,14 +61,6 @@ spanning-tree mode rapid-pvst
 spanning-tree portfast default
 spanning-tree portfast bpduguard default
 spanning-tree vlan 10,20,100,110,200,300 root primary
-
-!! shutdown unused ports
-int range fa0/3-4, fa0/14-24, g0/1-2
-    shutdown
-!! no portfast on trunking ports
-int range fa0/1-2, fa0/5-6
-    spanning-tree portfast disable
-end
 
 
 !! ssh apart instellen
