@@ -1,7 +1,7 @@
 const http = require('http');
 
-// http://[2a02:a45a:4099:1:6eee:cfb9:599:c8bd]:3000
-const hostname = '2a02:a45a:4099:1:6eee:cfb9:599:c8bd';
+// http://[2a02:a420:b:1a2::10]:3000
+const hostname = '2a02:a420:b:1a2::10';
 const port = 3000;
 
 const server = http.createServer((req, res) => {
