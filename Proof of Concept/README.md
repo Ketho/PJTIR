@@ -55,10 +55,10 @@
 - HQ-ALS2
     - vlan1     2a02:a420:b:1a0::2/64 (ssh)
 ## hosts
-- HQ-PC1        2a02:a420:b:1a1::10/64 (vlan 10)  gateway 2a02:a420:b:1a1::0
+- HQ-PC1        2a02:a420:b:1a1::10/64 (vlan 10)  gateway 2a02:a420:b:1a1::2
 - HQ-PC2        auto
-- Server1       2a02:a420:b:1a2::10/64 (vlan 20)  gateway 2a02:a420:b:1a2::0 [DNS]
-- HQ-PC10       2a02:a420:b:1a3::10/64 (vlan 100) gateway 2a02:a420:b:1a3::0
+- Server1       2a02:a420:b:1a2::10/64 (vlan 20)  gateway 2a02:a420:b:1a2::2 [DNS]
+- HQ-PC10       2a02:a420:b:1a3::10/64 (vlan 100) gateway 2a02:a420:b:1a3::2
 ```
 
 ### BR
